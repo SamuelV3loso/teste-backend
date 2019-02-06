@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/SamuelV3loso/teste-backend/issues"
   },
-  "homepage": "https://github.com/SamuelV3loso/teste-backend#readme"
+  "homepage": "https://github.com/SamuelV3loso/teste-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
 }
