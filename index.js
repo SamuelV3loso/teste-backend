@@ -1,6 +1,7 @@
-const mysql = require('mysql');
+const requires = require('./resourcesSql');
 
 const mysql = require('mysql');
+
 const express = require('express');
 
 var app = express();
@@ -24,3 +25,19 @@ var mysqlConnection = mysql.createConnection({
 
 app.listen(3000, ()=>console.log('Express server is running at: 3000'));
 
+app.get('/avg',(req,res)=>{
+    mysqlConnection.query(requires.getTotal(),(err, regionals, fields)=>{
+      if(!err){
+        mysqlConnection.query(requires.getNational(),(err, national, fields)=>{
+          if(!err){
+            var dados = '{ "regionals": ' +JSON.stringify(regionals) + ' }';
+            res.send(Object.assign({}, JSON.parse(dados), national[0]));
+          }
+          else
+          console.log(err);
+        })
+      }
+      else
+      console.log(err);
+    })
+  })
