@@ -53,3 +53,17 @@ app.get('/avgNational',(req,res)=>{
       console.log(err);
     })
   })
+
+
+//Retorna os valores por estado
+app.get('/avg/:state',(req,res)=>{
+    mysqlConnection.query(requires.getByStates([req.params.state]),(err, national, fields)=>{
+      if(!err){
+         res.send(national);
+      }
+      else
+      console.log(err);
+    })
+  })
+  
+  
