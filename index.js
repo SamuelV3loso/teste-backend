@@ -25,6 +25,7 @@ var mysqlConnection = mysql.createConnection({
 
 app.listen(3000, ()=>console.log('Express server is running at: 3000'));
 
+//Retorna todos os valores
 app.get('/avg',(req,res)=>{
     mysqlConnection.query(requires.getTotal(),(err, regionals, fields)=>{
       if(!err){
@@ -36,6 +37,17 @@ app.get('/avg',(req,res)=>{
           else
           console.log(err);
         })
+      }
+      else
+      console.log(err);
+    })
+  })
+
+//Retorna o valor national
+app.get('/avgNational',(req,res)=>{
+    mysqlConnection.query(requires.getNational(),(err, national, fields)=>{
+      if(!err){
+         res.send(national);
       }
       else
       console.log(err);
