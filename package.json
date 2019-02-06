@@ -1,0 +1,19 @@
+{
+  "name": "teste-backend",
+  "version": "1.0.0",
+  "description": "Repositório usado para o teste de back-end do Núcleo de Tecnologia Multimídia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelV3loso/teste-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelV3loso/teste-backend/issues"
+  },
+  "homepage": "https://github.com/SamuelV3loso/teste-backend#readme"
+}
