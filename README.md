@@ -45,3 +45,55 @@ questions - É a tabela que armazenar as perguntas que foram feitas aos alunos.
 alternatives - É a tabela que armazenar as alternativas para as perguntas que foram feitas aos alunos.
 
 answers - É a tabela que armazenar as respostas de cada aluno para cada pergunta.
+
+## Get Started
+
+### Pré-requisitos
+Para funcionar é necessaário ter instalado o gerenciador **npm** e também o **Node**.
+
+### Dependências
+
+Basta executar o seguinte comando para instalar as dependências que o projeto utiliza:
+```bash
+npm install
+```
+
+### Configurando o banco:
+
+*Considerado que você possua o banco mysql criado e populado.*
+Na classe index.js o banco está configurado dessa forma:
+
+```bash
+host:'localhost',
+  user: 'root',
+  password: 'mysql',
+  database: 'desafio'
+```
+Caso o usuário, senha ou banco do seu sistema estejam com outro nome, basta altera-los nessa classe para se adequar ao seu sistema.
+
+### Iniciando aplicação:
+
+```bash
+node index.js
+```
+Executando o comando acima, o servidor será iniciado em `http://localhost:3000`.
+
+### Rotas:
+
+#### /avg
+
+Retorna todos os valores. *Assim como pede no desafio.*
+
+#### /avg/al
+
+Retorna o valor por estado.
+```bash
+[{"description":"AL","average":21.5035}]
+```
+
+#### /avgNational
+
+Retorna o valor nacional.
+```bash
+[{"national":26.5581}]
+```
